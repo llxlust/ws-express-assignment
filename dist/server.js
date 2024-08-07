@@ -24,6 +24,7 @@ wss.on('connection', (ws) => {
     });
 });
 app.get("/", (req, res, next) => {
-    res.sendFile("C:/Users/CAMT/Desktop/network/express-ws/templates/chat.html");
+    let path = __dirname.split("src")[0];
+    res.sendFile(path + 'templates/chat.html');
 });
 app.listen(3100, () => console.log(`Server is running on port:${3100}`));
