@@ -23,8 +23,4 @@ wss.on('connection', (ws) => {
         console.log(`user was disconnect`);
     });
 });
-app.get("/", (req, res, next) => {
-    let path = __dirname.split("src")[0];
-    res.sendFile(path + 'templates/chat.html');
-});
 app.listen(3100, () => console.log(`Server is running on port:${3100}`));
